@@ -1,0 +1,17 @@
+[
+  {
+    "id": "bihar",
+    "name": "Bihar",
+    "image": "https://source.unsplash.com/400x200/?bihar"
+  },
+  {
+    "id": "delhi",
+    "name": "Delhi",
+    "image": "https://source.unsplash.com/400x200/?delhi"
+  },
+  {
+    "id": "uttar-pradesh",
+    "name": "Uttar Pradesh",
+    "image": "https://source.unsplash.com/400x200/?uttarpradesh"
+  }
+]

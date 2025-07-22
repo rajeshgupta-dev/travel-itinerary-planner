@@ -1,35 +1,47 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// src/App.jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import LandingPage from "./pages/LandingPage";
+import LoginPage from "./pages/LoginPage";
+import Dashboard from "./pages/Dashboard";
+import Footer from "./pages/Footer";
+import PlaceDetails from "./pages/PlaceDetails";
+import CountryPlaces from "./pages/CountryPlaces";
+import ItineraryPage from "./pages/ItineraryPage";
+import MyItineraryPage from "./pages/MyItineraryPage";
+import Navbar from "./components/Navbar";
+import { useAuth } from "./context/AuthContext";
+import SignupPage from "./pages/signupPage";
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const { user } = useAuth();
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<SignupPage />} />
 
-export default App
+        <Route
+          path="/dashboard"
+          element={user ? <Dashboard /> : <LoginPage />}
+        />
+        <Route
+          path="/itinerary"
+          element={user ? <ItineraryPage /> : <LoginPage />}
+        />
+        <Route
+          path="/my-itinerary"
+          element={user ? <MyItineraryPage /> : <LoginPage />}
+        />
+
+        <Route path="/place/:id" element={<PlaceDetails />} />
+        <Route path="/country/:countryName" element={<CountryPlaces />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
+  );
+};
+
+export default App;
