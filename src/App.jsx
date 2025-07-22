@@ -10,7 +10,7 @@ import ItineraryPage from "./pages/ItineraryPage";
 import MyItineraryPage from "./pages/MyItineraryPage";
 import Navbar from "./components/Navbar";
 import { useAuth } from "./context/AuthContext";
-import SignupPage from "./pages/signupPage";
+import SignupPage from "./pages/SignupPage";
 
 const App = () => {
   const { user } = useAuth();
