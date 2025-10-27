@@ -4,6 +4,13 @@
 A web-based application that allows users to explore countries, view top destinations, plan personalized itineraries, and manage their travel plans. Built using **React**, **Tailwind CSS**, **Firebase Authentication**, and **React Router**.
 ---
 
+### 🌐 Live Demo
+
+🔗 **[View the Live Project](https://rajeshgupta-dev.github.io/travel-itinerary-planner/)**  
+
+
+---
+
 ### 🚀 Features
 
 - 🔐 **User Authentication** (Login / Signup using Firebase)
