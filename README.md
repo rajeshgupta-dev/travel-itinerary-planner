@@ -73,7 +73,6 @@ npm install
 - Get your config credentials and replace them in `src/firebase.js`:
 
 ```js
-// Example firebase.js
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
 
