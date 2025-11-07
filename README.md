@@ -6,8 +6,7 @@ A web-based application that allows users to explore countries, view top destina
 
 ### 🌐 Live Demo
 
-🔗 **[View the Live Project](https://rajeshgupta-dev.github.io/travel-itinerary-planner/)**  
-
+🔗 <a href="https://travel-itineraryplanner.netlify.app/" target="_blank">**View the Live Project**</a>
 
 ---
 
